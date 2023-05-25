@@ -8,21 +8,21 @@ namespace UserRegistrationProblemWithException
         static void Main(string[] args)
         {
              
-            Console.WriteLine("Please Enter your Email");
+            
             try
             {
-                Console.WriteLine("Please Enter your Email");
+                Console.WriteLine("Please Enter your Mobile Number");
                 var lastName = Console.ReadLine();
-                var regexDt = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                var regexDt = new Regex(@"^([\+]?[0-9]{1,3}[\s.-][0-9]{1,12})([\s.-]?[0-9]{1,4}?)$");
 
                 if (regexDt.IsMatch(lastName))
-                    Console.WriteLine("Valid Email Name");
+                    Console.WriteLine("Valid Mobile Number");
                 else
-                    Console.WriteLine("Not Valid Email Name");
+                    Console.WriteLine("Not Valid Mobile number");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Please Enter Valid Email");
+                Console.WriteLine("Please Enter Valid Mobile Number");
             }
         }
     }
