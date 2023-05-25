@@ -11,18 +11,18 @@ namespace UserRegistrationProblemWithException
             
             try
             {
-                Console.WriteLine("Please Enter your Mobile Number");
+                Console.WriteLine("Please Enter your Password min 8 digit upper");
                 var lastName = Console.ReadLine();
-                var regexDt = new Regex(@"^([\+]?[0-9]{1,3}[\s.-][0-9]{1,12})([\s.-]?[0-9]{1,4}?)$");
+                var regexDt = new Regex(@"^[a-z]{8,16}$");
 
                 if (regexDt.IsMatch(lastName))
-                    Console.WriteLine("Valid Mobile Number");
+                    Console.WriteLine("Valid Password ");
                 else
-                    Console.WriteLine("Not Valid Mobile number");
+                    Console.WriteLine("Not Valid password ");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Please Enter Valid Mobile Number");
+                Console.WriteLine("Please Enter Valid Password");
             }
         }
     }
