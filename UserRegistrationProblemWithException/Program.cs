@@ -12,12 +12,12 @@ namespace UserRegistrationProblemWithException
             try
             {
                 var firstName = Console.ReadLine();
-                var regexDt = new Regex("^[A-Z][a-zA-Z]{2,20}$");
+                var regexDt = new Regex("^[A-Z][a-z]{2,20}$");
 
                 if (regexDt.IsMatch(firstName))
                     Console.WriteLine("Valid First Name");
                 else
-                    Console.WriteLine("Not Valid First Name");
+                    Console.WriteLine("First Name not valid");
             }
             catch (Exception e)
             {
