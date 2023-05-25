@@ -8,16 +8,16 @@ namespace UserRegistrationProblemWithException
         static void Main(string[] args)
         {
              
-            Console.WriteLine("Please Enter your first Name With first char cap and min 3 len");
+            Console.WriteLine("Please Enter your Last Name With first char cap and min 3 len");
             try
             {
                 var firstName = Console.ReadLine();
-                var regexDt = new Regex("^[A-Z][a-z]{2,20}$");
+                var regexDt = new Regex("^[A-Z][a-zA-Z]{2,20}$");
 
                 if (regexDt.IsMatch(firstName))
-                    Console.WriteLine("Valid First Name");
+                    Console.WriteLine("Valid Last Name");
                 else
-                    Console.WriteLine("First Name not valid");
+                    Console.WriteLine("Last Name not valid");
             }
             catch (Exception e)
             {
